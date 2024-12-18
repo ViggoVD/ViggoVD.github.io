@@ -1,50 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #0078D7;
-            color: white;
-            padding: 1rem 0;
-        }
-        main {
-            padding: 2rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        a {
-            color: #0078D7;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Merry Mission Gamerules</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('https://cdn.pixabay.com/photo/2022/12/14/19/54/christmas-7656133_1280.jpg'); /* Kerstachtergrond afbeelding */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8); /* Transparant wit voor betere leesbaarheid */
+    }
+    .language-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+    .language-button:hover {
+      text-decoration: none;
+    }
+    .rules {
+      display: none;
+      text-align: left;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Welcome to My Website</h1>
-    <p>Your tagline here</p>
-</header>
-<main>
-    <h2>About</h2>
-    <p>This is a simple HTML page with basic styling. Use it to start your project!</p>
-    <h2>Contact</h2>
-    <p>Feel free to <a href="mailto:example@example.com">email me</a>.</p>
-</main>
-<footer>
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-</footer>
+<div class="container">
+  <h1>Merry Mission Gamerules</h1>
+  <p>Select your language:</p>
+  <button class="language-button" onclick="showRules('nl')">Nederlands</button>
+  <button class="language-button" onclick="showRules('en')">English</button>
+
+  <div id="rules-nl" class="rules">
+    <h2>Spelregels (Nederlands)</h2>
+    <p><strong>Aantal spelers:</strong> 2 tot 4</p>
+    <p><strong>Talen:</strong> Het spel is beschikbaar in Nederlands en Engels</p>
+    <p><strong>Doel:</strong> Speel samen tegen het spel en bereik de finish. Je wint zodra iedereen de finish heeft bereikt.</p>
+    <p><strong>Start:</strong> De jongste speler begint.</p>
+    <p><strong>Goober:</strong> Maak een goober; dit is je speelstuk op het bord.</p>
+    <p><strong>Spelverloop:</strong> Sommige vakjes op het bordspel geven je een positief of een negatief. Het vakje met een smiley die lacht is positief en de smiley die verdrietig kijkt is een negatief kaartje. Op beide soorten kaarten staat een vraag, deze vraag beantwoord je of een opdracht. De speler die een kaartje moet pakken, pakt niet zelf het kaartje, een andere speler pakt het kaartje en stelt de vraag aan jou. </p>
+    <ul>
+      <li><strong>Positieve kaart:</strong>
+        <ul>
+          <li>Iedereen mag ... stappen vooruit</li>
+          <li>Speler ... mag ... stappen vooruit</li>
+          <li>Speler mag nog een keer dobbelen</li>
+          <li>Speler mag het gedobbelde aantal verdubbelen en vooruit</li>
+        </ul>
+      </li>
+      <li><strong>Negatieve kaart:</strong>
+        <ul>
+          <li>Speler moet nog een keer dobbelen; het gegooide aantal bepaalt hoeveel beurten je overslaat</li>
+          <li>Sla één beurt over</li>
+          <li>Speler ... moet ... stappen terug</li>
+          <li>Speler ... moet terug naar het begin</li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Let op:</strong> Je mag elkaar niet helpen met de vragen; degene die de vraag krijgt, moet deze zelf beantwoorden.</p>
+  </div>
+
+  <div id="rules-en" class="rules">
+    <h2>Game Rules (English)</h2>
+    <p><strong>Player Count:</strong> 2-4</p>
+    <p><strong>Languages:</strong> The game is available in Dutch and English</p>
+    <p><strong>Objective:</strong> Play against the game and reach the finish. You win once everyone has crossed the finish line.</p>
+    <p><strong>Start:</strong> The youngest player starts.</p>
+    <p><strong>Goober:</strong> Create a goober; this is your player piece on the board.</p>
+    <p><strong>Gameplay:</strong> Some boxes on the board game give you a positive or a negative. The box with a smiley smiling is positive and the smiley looking sad is a negative card. On both types of cards there is a question, you answer this question or a task. The player who has to take a card does not take the card himself, another player takes the card and asks the question to you. </p>
+    <ul>
+      <li><strong>Positive Card:</strong>
+        <ul>
+          <li>Everyone moves ... spaces forward</li>
+          <li>Player ... moves ... spaces forward</li>
+          <li>Player can roll the dice again</li>
+          <li>Player can double the rolled number and move forward</li>
+        </ul>
+      </li>
+      <li><strong>Negative Card:</strong>
+        <ul>
+          <li>Player must roll the dice again; the number rolled determines how many turns are skipped</li>
+          <li>Skip one turn</li>
+          <li>Player ... moves ... spaces back</li>
+          <li>Player ... must return to the start</li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Note:</strong> You are not allowed to help each other with the questions; the player who receives the question must answer it independently.</p>
+  </div>
+</div>
+
+<script>
+  function showRules(language) {
+    document.getElementById('rules-nl').style.display = 'none';
+    document.getElementById('rules-en').style.display = 'none';
+    if (language === 'nl') {
+      document.getElementById('rules-nl').style.display = 'block';
+    } else if (language === 'en') {
+      document.getElementById('rules-en').style.display = 'block';
+    }
+  }
+</script>
 </body>
 </html>
